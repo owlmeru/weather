@@ -1,0 +1,322 @@
+@font-face {
+    font-family: 'TT Commons DemiBold';
+    src: url('assets/TTCommons-DemiBold.eot');
+    src: url('assets/TTCommons-DemiBold.eot?#iefix') format('embedded-opentype'),
+    url('assets/TTCommons-DemiBold.woff') format('woff'),
+    url('assets/TTCommons-DemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'VAG World Bold';
+        src: url('assets/vag_world_bold.eot'); 
+        src: url('assets/vag_world_bold.eot?#iefix') format('embedded-opentype'),
+            url('assets/vag_world_bold.woff2') format('woff2'), 
+            url('assets/vag_world_bold.woff') format('woff'), 
+            url('assets/vag_world_bold.ttf') format('truetype'), 
+            url('assets/vag_world_bold.svg#vag_world_bold') format('svg');
+    }
+    
+
+*{
+margin: 0;
+padding: 0;
+user-select: none;
+font-family: 'PT Sans', sans-serif;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;}
+
+::-webkit-scrollbar {
+width: 0 !important;
+height: 0 !important;
+display: none !important;
+}
+
+.cardarrow {
+ height: 50px;
+ line-height: 50px;
+position: absolute;
+right: 15px;
+top: 0px;
+font-size: 20px;
+color: #858585;
+
+}
+:root[theme='light']{
+--background: var(--tg-theme-secondary-bg-color);
+--cb-def-background: rgb(192, 192, 192);
+--cb-clear-background: rgb(253, 215, 141);
+--cb-cold-background: rgb(184, 232, 255);
+--cb-rain-background: rgb(95, 108, 147);;
+--cb-cloudy-background: #ccdded;
+--cb-snow-background: #d9d9d9;
+
+
+--text: var(--tg-theme-header-bg-color);
+--textcopy: #646464;
+--sec: #8d8d8d;
+--numbuttontext: var(--tg-theme-text-color);
+--numbuttontextsec:  var(--tg-theme-hint-color);
+--numbuttonbg: var(--tg-theme-section-bg-color);
+--ripple: #dbdbdb;
+
+
+}
+:root[theme='dark'] {
+--background: var(--tg-theme-bg-color);
+--cb-def-background: #7d7d7d;
+--cb-clear-background: #fdd78d;
+--cb-cold-background: #b8e8ff;
+--cb-rain-background: #5f6c93;
+--cb-cloudy-background: #ccdded;
+--cb-snow-background: #d9d9d9;
+
+--text: #ececec;
+--textcopy: #b4b4b4;
+--sec: #afafaf;
+--numbuttontext: #e8e8e8;
+--numbuttontextsec: #939393;
+--numbuttonbg: #373737;
+--ripple: #575757;
+
+
+}
+
+body {
+background: var(--background);
+color: var(--text);
+}
+
+.colorblock {
+background: var(--cb-def-background);
+width: 100vw;
+height: 35vh;
+position: relative;
+overflow: hidden;
+
+
+}
+.cbtext {
+font-family: 'TT Commons DemiBold';
+font-size: 200px;
+position: absolute;
+bottom: -76px;
+color: #ffffff;
+left: -6px;
+}
+
+.header {
+font-family: 'TT Commons DemiBold';
+font-size: 25px;
+color: var(--tg-theme-text-color);
+margin-left: 5px;
+display: inline-block;
+
+}
+
+.city {
+font-family: 'TT Commons DemiBold';
+color: var(--tg-theme-subtitle-text-color);
+}
+
+
+.numbutton {
+min-height: 22px;
+width: calc(90vw - 15px);
+background: var(--numbuttonbg);
+margin: auto;
+margin-bottom: 10px;
+border-radius: 20px;
+padding: 15px;
+text-align: left;
+font-size: 15px;
+font-family: 'PT Sans', sans-serif;  
+position: relative;
+color: var(--numbuttontext);
+}
+
+.copy {
+font-size: 15px;
+margin-bottom: 10px;
+text-align: center;
+font-family: 'PT Sans', sans-serif;  
+color: var(--tg-theme-subtitle-text-color);
+margin-top: 10px;
+
+}
+
+
+.clear {
+background: var(--cb-clear-background);
+
+} 
+
+
+.cold {
+background: var(--cb-cold-background);
+
+}
+
+.rain {
+background: var(--cb-rain-background);
+
+}
+
+.cloudy {
+background: var(--cb-cloudy-background);
+
+
+}
+
+.preload {
+background: linear-gradient(-45deg, var(--tg-theme-secondary-bg-color), #575757 );
+animation: move-background 1.5s linear infinite;
+background-size: 500% 500%;
+   }
+
+
+   .preload_content {
+       opacity: 0;
+   }
+
+@keyframes move-background {
+0% { background-position: 0% 0% }
+50% { background-position: 100% 0% }
+100% { background-position: 0% 0% }
+}
+
+.ripple {
+background-position: center;
+transition: background 0.5s;
+}
+.ripple:hover {
+background: var(--numbuttonbg) radial-gradient(circle, transparent 1%, var(--numbuttonbg) 1%) center/15000%;
+}
+.ripple:active {
+background-color: var(--ripple);
+background-size: 100%;
+transition: background 0s;
+}
+
+
+a {
+color: #000;
+text-decoration: none;    
+}
+
+
+a:visited {
+color: #000;
+}
+a:active {
+color: #000;
+}
+
+a:hover {
+color: #000;
+background: initial;
+  }
+
+  a:focus {
+    color: #000;
+    background: initial;
+      }
+
+.city_popup {
+    width: 100vw;
+    height: calc(100vh + 200px);
+    position: absolute;
+    left: 0;
+    top: 0px;
+    background-color: var(--tg-theme-secondary-bg-color);
+    text-align: center;
+    display: block;
+    z-index: 99;
+
+}      
+
+.city_popup_content {
+    display: inline-block;
+    margin-top: 20px;
+}
+.city_input {
+    width: calc(100% - 10px);
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: var(--tg-theme-secondary-bg-color);
+    padding-left: 10px;
+    font-size: 15px;
+    border: 0;
+    color: var(--numbuttontext);
+
+
+}
+
+.city_button {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: var(--tg-theme-button-color);
+    font-size: 15px;
+    border: 0;
+    color: var(--tg-theme-button-text-color);
+}
+
+.city_button_re {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--tg-theme-button-color);
+    font-size: 15px;
+    border: 0;
+}
+
+
+.top_pills_left {
+width: 100vw;
+height: 40px;
+position: absolute;
+/* left: 0; */
+top: 18px;
+z-index: 50;
+margin: auto;
+text-align: center;
+}
+
+.top_pills_right {
+    width: 100vw;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top:10px;
+    z-index: 50;
+    text-align: right;
+}
+
+.pill {
+background-color: var(--numbuttonbg);
+color: var(--numbuttontext);
+padding: 5px 10px;
+border-radius: 12px;
+margin-left: 5vw;
+display: inline-block;
+/* border: var(--numbuttonbg) 0.1px solid; */
+}
+
+.loading_placeholder {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--tg-theme-secondary-bg-color);
+    z-index: 99999;
+
+}
