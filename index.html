@@ -17,7 +17,13 @@
     </script>
 </head>
 <body>
-    <div class="loading_placeholder preload"></div>
+    <div id="styleplace"></div>
+    <div class="loading_placeholder">
+        <div class="placeholder_center">
+            <i class="fa-solid fa-spinner fa-spin"></i> <br>
+        </div>
+    <div class="placeholder_logo" id="placeholderLogoPlace"><img src="assets/logoWhite.svg" height="30"></div>
+    </div>
 
     <div id="root">
     <div class="colorblock clear">
@@ -40,31 +46,48 @@
     </div>
 
     </div>
-    
+
+    <div class="numbutton " style="margin-top: 15px; margin-bottom: 20px; background: none; padding: 0; width: calc(90vw + 15px);" >
+        <div class="content">
+        <div class="header" id="logoPlace"> 
+            <img src="assets/logoWhite.svg" height="30">
+        </div>
+        <b style="position: absolute;right: 0px;">
+        <div class="pill" onclick="showSettings()" style="margin-right: 0vw;margin-left: 0;"><i class="fa-solid fa-gear"></i></div>
+        </b>  
+        </div>
+
 
 
     <div class="city_popup" id="city_popup">
         <div class="city_popup_content">
-            <h2 ondblclick="eruda.init()" style="color: var(--tg-theme-text-color);">Привет, <span id="user_name"></span>! 👋</h2>
+            <h2 ondblclick="eruda.init()" id="setHeader" style="color: var(--tg-theme-text-color);">Привет, <span id="user_name"></span>! 👋</h2>
+            <div id="setMain">
             <div class="numbutton " style="margin-top: 15px;" >
                 <div class="content">
                     <p>Добро пожаловать в Owl Weather - удобное мини-приложение с погодой прямо в Telegram</p>
                 </div>
             </div>
-            <div class="numbutton " style="margin-top: 8px;" >
+            <div class="numbutton " style="margin-top: 15px;" >
                 <div class="content">
                     <p>Давайте добавим место, для которого приложение будет отображать погоду:</p>
                     <input type="text" placeholder="Введите город..." id="city_input" class="city_input">
                     <button class="city_button" id = "city_button" onclick="searchByName()">Найти!</button>
                 </div>
             </div>
-
+        </div>
             <div id="city_div">
 
             </div>
+        <div id="setCopy">
+
 
         </div>
+        </div>
        </div>
+
+
+            
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
@@ -80,7 +103,7 @@
          clickmap:true,
          trackLinks:true,
          accurateTrackBounce:true,
-         webvisor:true
+         webvisor:false
     });
  </script>
  <noscript><div><img src="https://mc.yandex.ru/watch/97715914" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
