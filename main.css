@@ -353,7 +353,7 @@ display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--tg-theme-header-bg-color);
+    background-color: var(--tg-theme-bg-color);
     z-index: 99999;
 }
 
