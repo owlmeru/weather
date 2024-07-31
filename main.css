@@ -136,7 +136,7 @@ color: var(--tg-theme-subtitle-text-color);
 
 .numbutton {
     min-height: 22px;
-    width: calc(90vw - 15px);
+    width: calc(86vw);
     background: var(--numbuttonbg);
     margin: auto;
     margin-bottom: 10px;
@@ -148,6 +148,49 @@ color: var(--tg-theme-subtitle-text-color);
     position: relative;
     color: var(--numbuttontext);
 }
+
+.numbutton_table {
+    min-height: 70px;
+    width: calc(100% - 24px);
+    background: var(--numbuttonbg);
+    border-radius: 20px;
+    padding: 12px;
+    text-align: left;
+    font-size: 15px;
+    font-family: 'PT Sans', sans-serif;
+    color: var(--numbuttontext);
+    display: inline-block;
+    position: relative;
+}
+
+.nmb_table_td {
+    width: 50%;
+}
+
+
+
+.nmb_table_counter {
+    position: absolute;
+    right: 3vw;
+    bottom: 1vw;
+    font-size: 8.5vw;
+    font-weight: 200;
+    vertical-align: bottom;
+}
+
+.nmb_table {
+        width: calc(86vw + 50px);
+        margin: auto;
+        text-align: center;
+        border-spacing: 10px;
+
+}
+
+.ai {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
 
 .numbutton_in {
     min-height: 22px;
@@ -344,6 +387,8 @@ padding: 5px 10px;
 border-radius: 12px;
 margin-left: 5vw;
 display: inline-block;
+cursor: pointer;
+
 /* border: var(--numbuttonbg) 0.1px solid; */
 }
 
